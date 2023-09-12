@@ -1,16 +1,16 @@
 create database QuanLyBanHang;
 use QuanLyBanHang;
 create table Customer(
-	cID int primary key,
+	cId int primary key,
     cName varchar(50),
 	cAge varchar(50)
 );
-create table Orderr (
+create table Orders (
 	oId int primary key,
     oDate Date,
     oTotalPrice double,
-    cID int,
-	foreign key (cID) references Customer(cID)
+    cId int,
+	foreign key (cId) references Customer(cId)
 );
 create table Product(
 	pId int primary key,
@@ -20,7 +20,7 @@ create table Product(
 create table Oderdetail(
 	oId int,
     pId int,
-    odQTY varchar(20),
+    odQTY int,
     primary key(oId,pId)
 )
 
