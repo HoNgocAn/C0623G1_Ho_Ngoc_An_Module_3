@@ -31,3 +31,33 @@ foreign key(soPN) references phieunhap(soPN),
 dgNhap varchar(100),
 slNhap int
 );
+create table nhaCC(
+maNCC int primary key,
+tenNCC varchar(100),
+diachiNCC varchar(100)
+);
+create table donDH(
+soDH int primary key,
+ngayDH date,
+maNCC int,
+foreign key (maNCC) references nhacc(maNCC)
+);
+create table chitietDonDH(
+maVTU int,
+soDH int,
+primary key (maVTU, soDH),
+foreign key (maVTU) references vattu(maVTU),
+foreign key (soDH) references dondh(soDH)
+);
+create table sdt(
+soDT int primary key,
+maNCC int,
+foreign key (maNCC) references nhaCC(maNCC)
+);
+create table cungcap(
+maNCC int,
+soDH int,
+primary key(maNCC,soDH),
+foreign key(maNCC) references nhacc(maNCC),
+foreign key(soDH) references dondh(soDH)
+);
