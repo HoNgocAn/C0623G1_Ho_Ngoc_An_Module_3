@@ -55,10 +55,4 @@ maNCC int,
 primary key(soDT,maNCC),
 foreign key (maNCC) references nhaCC(maNCC)
 );
-create table cungcap(
-maNCC int,
-soDH int,
-primary key(maNCC,soDH),
-foreign key(maNCC) references nhacc(maNCC),
-foreign key(soDH) references dondh(soDH)
-);
+
