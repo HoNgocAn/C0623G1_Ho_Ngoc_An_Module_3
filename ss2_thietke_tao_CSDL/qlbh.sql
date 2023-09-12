@@ -21,7 +21,8 @@ create table Oderdetail(
 	oId int,
     pId int,
     odQTY int,
-    primary key(oId,pId)
+    primary key(oId,pId),
+    foreign key(oId) references Orders(oId),
+    foreign key(pId) references Product(pId)
 )
-
 
