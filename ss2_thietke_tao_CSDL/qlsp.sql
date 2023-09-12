@@ -50,8 +50,9 @@ foreign key (maVTU) references vattu(maVTU),
 foreign key (soDH) references dondh(soDH)
 );
 create table sdt(
-soDT int primary key,
+soDT varchar(20),
 maNCC int,
+primary key(soDT,maNCC),
 foreign key (maNCC) references nhaCC(maNCC)
 );
 create table cungcap(
