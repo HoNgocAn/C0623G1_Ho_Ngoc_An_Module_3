@@ -1,58 +1,58 @@
-create database QuanLySanPham;
-use QuanLySanPham;
+CREATE DATABASE QuanLySanPham;
+USE QuanLySanPham;
 
-create table phieuxuat(
-soPX int primary key,
-ngayxuat date
+CREATE TABLE phieuxuat(
+soPX INT PRIMARY KEY NOT NULL UNIQUE,
+ngayxuat DATE DEFAULT (CURRENT_DATE)
 );
 create table phieunhap(
-soPN int primary key,
-ngaynhap date
+soPN INT PRIMARY KEY NOT NULL UNIQUE,
+ngaynhap DATE DEFAULT (CURRENT_DATE)
 );
-create table vattu(
-maVTU int primary key,
-tenVTU varchar(100)
+CREATE TABLE vattu(
+maVTU INT PRIMARY KEY NOT NULL UNIQUE,
+tenVTU VARCHAR(100) NOT NULL
 );
-create table chitietPX (
-maVTU int,
-soPX int,
-primary key(maVTU,soPX),
-foreign key(maVTU) references vattu(maVTU),
-foreign key(soPX) references phieuxuat(soPX),
-dgXuat varchar(100),
-slXuat int
+CREATE TABLE chitietPX (
+maVTU INT,
+soPX INT,
+PRIMARY KEY(maVTU,soPX),
+FOREIGN KEY(maVTU) REFERENCES vattu(maVTU),
+FOREIGN KEY(soPX) REFERENCES phieuxuat(soPX),
+dgXuat VARCHAR(100) NOT NULL,
+slXuat INT CHECK(slXuat>0)
 );
-create table chitietPN (
-maVTU int,
-soPN int,
-primary key(maVTU,soPN),
-foreign key(maVTU) references vattu(maVTU),
-foreign key(soPN) references phieunhap(soPN),
-dgNhap varchar(100),
-slNhap int
+CREATE TABLE chitietPN (
+maVTU INT,
+soPN INT,
+PRIMARY KEY(maVTU,soPN),
+FOREIGN KEY(maVTU) REFERENCES  vattu(maVTU),
+FOREIGN KEY(soPN) REFERENCES  phieunhap(soPN),
+dgNhap VARCHAR(100) NOT NULL,
+slNhap INT CHECK(slNhap>0)
 );
-create table nhaCC(
-maNCC int primary key,
-tenNCC varchar(100),
-diachiNCC varchar(100)
+CREATE TABLE nhaCC(
+maNCC INT PRIMARY KEY NOT NULL UNIQUE,
+tenNCC VARCHAR(100) NOT NULL,
+diachiNCC VARCHAR (100) NOT NULL
 );
-create table donDH(
-soDH int primary key,
-ngayDH date,
-maNCC int,
-foreign key (maNCC) references nhacc(maNCC)
+CREATE TABLE donDH(
+soDH INT PRIMARY KEY,
+ngayDH DATE DEFAULT (CURRENT_DATE),
+maNCC INT,
+FOREIGN KEY (maNCC) REFERENCES nhacc(maNCC)
 );
-create table chitietDonDH(
-maVTU int,
-soDH int,
-primary key (maVTU, soDH),
-foreign key (maVTU) references vattu(maVTU),
-foreign key (soDH) references dondh(soDH)
+CREATE TABLE chitietDonDH(
+maVTU INT,
+soDH INT,
+PRIMARY KEY (maVTU, soDH),
+FOREIGN KEY (maVTU) REFERENCES vattu(maVTU),
+FOREIGN KEY (soDH) REFERENCES dondh(soDH)
 );
-create table sdt(
-soDT varchar(20),
-maNCC int,
-primary key(soDT,maNCC),
-foreign key (maNCC) references nhaCC(maNCC)
+CREATE TABLE sdt(
+soDT VARCHAR(20),
+maNCC INT,
+PRIMARY KEY(soDT,maNCC),
+FOREIGN KEY (maNCC) REFERENCES nhaCC(maNCC)
 );
 

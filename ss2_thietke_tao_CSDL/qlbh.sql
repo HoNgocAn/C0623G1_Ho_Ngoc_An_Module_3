@@ -1,28 +1,30 @@
-create database QuanLyBanHang;
-use QuanLyBanHang;
-create table Customer(
-	cId int primary key,
-    cName varchar(50),
-	cAge varchar(50)
+CREATE DATABASE QuanLyBanHang;
+USE QuanLyBanHang;
+CREATE TABLE Customer(
+	cId INT PRIMARY KEY NOT NULL ,
+    cName VARCHAR(50) NOT NULL,
+	cAge INT(50), 
+    CHECK (cAge>=18 AND cAge<120),
+	UNIQUE(cId)
 );
-create table Orders (
-	oId int primary key,
-    oDate Date,
-    oTotalPrice double,
-    cId int,
-	foreign key (cId) references Customer(cId)
+CREATE TABLE Orders (
+	oId INT PRIMARY KEY NOT NULL UNIQUE,
+    oDate DATE DEFAULT (CURRENT_DATE),
+    oTotalPrice DOUBLE CHECK (oTotalPrice>0),
+    cId INT,
+    FOREIGN KEY (cId) REFERENCES Customer(cId)
 );
-create table Product(
-	pId int primary key,
-    pName varchar(50),
-    pPrice double
+CREATE TABLE Product(
+	pId INT PRIMARY KEY NOT NULL UNIQUE,
+    pName VARCHAR(50) NOT NULL,
+    pPrice double NOT NULL CHECK(pPrice>0)
 );
-create table Oderdetail(
-	oId int,
-    pId int,
-    odQTY int,
-    primary key(oId,pId),
-    foreign key(oId) references Orders(oId),
-    foreign key(pId) references Product(pId)
+CREATE TABLE Oderdetail(
+	oId INT,
+    pId INT,
+    odQTY INT NOT NULL CHECK(odQTY>0),
+    PRIMARY KEY(oId,pId),
+    FOREIGN KEY(oId) REFERENCES Orders(oId),
+    FOREIGN KEY(pId) REFERENCES Product(pId)
 )
 
