@@ -15,3 +15,11 @@ SELECT *
     AND (dia_chi LIKE '%Đà Nẵng' 
     OR dia_chi LIKE '%Quảng Trị');
     
+SELECT k.*, count(k.ma_khach_hang) 
+FROM khach_hang k
+JOIN loai_khach l
+ON	k.ma_loai_khach=l.ma_loai_khach
+JOIN hop_dong h
+ON k.ma_khach_hang=h.ma_khach_hang
+WHERE l.ten_loai_khach="diamond"
+GROUP BY k.ma_khach_hang;
