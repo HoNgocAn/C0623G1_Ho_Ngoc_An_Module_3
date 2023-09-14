@@ -10,8 +10,8 @@ OR SUBString_INDEX(ho_ten,' ',-1) LIKE 'K%');
 SELECT * 
     FROM khach_hang
     WHERE
-    (YEAR(curdate())-year(ngay_sinh))>18 
-    AND (YEAR(curdate())-year(ngay_sinh))<50 
+    (YEAR(curdate())-YEAR(ngay_sinh))>18 
+    AND (YEAR(curdate())-YEAR(ngay_sinh))<50 
     AND (dia_chi LIKE '%Đà Nẵng' 
     OR dia_chi LIKE '%Quảng Trị');
     

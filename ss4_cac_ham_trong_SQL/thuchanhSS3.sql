@@ -1,4 +1,8 @@
 USE QuanLySinhVien;
+SELECT COUNT(StudentName) FROM Student;
+
+select max(mark) as "Diem cao nhat la" from mark;
+
 SELECT StudentName, COUNT(StudentId) AS "Số lương học viên"
 FROM Student
 GROUP BY StudentName;

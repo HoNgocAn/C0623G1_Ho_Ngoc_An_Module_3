@@ -3,6 +3,10 @@ SELECT *
 FROM student
 WHERE StudentName LIKE "H%";
 
+SELECT *
+FROM Class
+WHERE month(startDate)=12;
+
 SELECT * 
 FROM subjects
 WHERE Credit >= 3 AND Credit <=5 ;

@@ -53,7 +53,7 @@ SELECT O.oId, O.oDate, O.oTotalPrice
 FROM ORDERS O;
 
 SELECT 
-    c.*, p.pName
+c.cId,c.cName,c.cAge, p.pName
 FROM customer c
 JOIN orders o ON c.cID = o.cID
 JOIN orderdetail od ON o.oID = od.oID
