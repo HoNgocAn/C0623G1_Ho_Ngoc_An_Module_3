@@ -22,4 +22,5 @@ ON	k.ma_loai_khach=l.ma_loai_khach
 JOIN hop_dong h
 ON k.ma_khach_hang=h.ma_khach_hang
 WHERE l.ten_loai_khach="diamond"
-GROUP BY k.ma_khach_hang;
+GROUP BY k.ma_khach_hang
+ORDER BY count(k.ma_khach_hang); 

@@ -5,7 +5,7 @@ WHERE StudentName LIKE "H%";
 
 SELECT *
 FROM Class
-WHERE month(startDate)=12;
+WHERE MONTH(startDate)=12;
 
 SELECT * 
 FROM subjects
@@ -18,4 +18,4 @@ WHERE StudentName = 'Hung';
 SELECT S.StudentName, Su.SubName, M.Mark
 FROM student s jOIN mark m ON s.StudentId = m.MarkId 
 JOIN subjects Su ON m.MarkId = su.SubId
-ORDER BY mark DESC;
+ORDER BY m.mark DESC, s.studentName ASC;
