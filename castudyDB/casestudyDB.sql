@@ -46,7 +46,7 @@ create table loai_khach(
 ma_loai_khach int primary key auto_increment,
 ten_loai_khach varchar(45)
 );
-insert into loai_khach(ten_loai_khach) values ('Diamond'), ('Platinium'),('Gold'),('Silver'),('Member');
+insert into loai_khach(ten_loai_khach) values ('Diamond'), ('Platinum'),('Gold'),('Silver'),('Member');
 create table khach_hang(
 ma_khach_hang int primary key auto_increment,
 ma_loai_khach int,

@@ -53,13 +53,13 @@ HAVING  count(dk.ma_dich_vu_di_kem) =1;
 
 -- Câu 15
 
-SELECT n.ma_nhan_vien, n.ho_ten, t.ten_trinh_do, b.ten_bo_phan, n.so_dien_thoai, n.dia_chi, count(n.ho_ten) AS "Số lượng hợp đồng"
+SELECT n.ma_nhan_vien, n.ho_ten, t.ten_trinh_do, b.ten_bo_phan, n.so_dien_thoai, n.dia_chi, count(n.ma_nhan_vien) AS "Số lượng hợp đồng"
 FROM hop_dong h
 JOIN nhan_vien n ON n.ma_nhan_vien = h.ma_nhan_vien
 JOIN trinh_do t ON n.ma_trinh_do = t.ma_trinh_do
 JOIN bo_phan b ON b.ma_bo_phan = n.ma_bo_phan
 WHERE h.ngay_lam_hop_dong>= "2020-1-1" AND h.ngay_lam_hop_dong<="2021-12-31"
 GROUP BY n.ma_nhan_vien, n.ho_ten, t.ten_trinh_do, b.ten_bo_phan, n.so_dien_thoai, n.dia_chi
-HAVING count(n.ho_ten)<=3;
+HAVING count(n.ma_nhan_vien)<=3;
 
 
