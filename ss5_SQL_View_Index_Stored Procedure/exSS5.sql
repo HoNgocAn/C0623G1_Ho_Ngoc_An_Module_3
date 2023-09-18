@@ -43,9 +43,9 @@ WHERE product_status = '1';
 DROP VIEW product_views;
 
 -- Thao tác với Store Procedure
-DELIMITER //
 
--- Hien thi danh sach
+-- Hiển thị danh sách
+DELIMITER //
 CREATE PROCEDURE findAllProduct()
 BEGIN
   SELECT * FROM products;
@@ -54,7 +54,7 @@ DELIMITER ;
 
 CALL findAllProduct();
 
---  Them san pham moi
+--  Thêm sản phẩm mới
 DELIMITER //
 CREATE PROCEDURE addNewProduct(
 	product_code VARCHAR(50),
@@ -69,9 +69,9 @@ VALUES(product_code,product_name,product_price,product_amount,product_descriptio
 END //
 DELIMITER ;
 
-CALL addNewProduct('A3','Vest','300000','0','Lịch Lãm',1);
+CALL addNewProduct('A4','Quần tây','400000','3','Lịch Lãm',1);
 
--- Update san pham
+-- Update sản phẩm
 DELIMITER //
 CREATE PROCEDURE editProduct(
 	product_id int,
@@ -94,9 +94,9 @@ BEGIN
 END //
 DELIMITER ;
 
-CALL editProduct('A3','Vest','300000','0','Lịch Lãm',1);
+CALL editProduct(3,'A3','Vest','300000','0','Chất lượng cao',1);
 
--- Xoa san pham theo id
+-- Xóa sản phẩm theo id
 DELIMITER //
 CREATE PROCEDURE deleteProduct(
 	product_id int)
