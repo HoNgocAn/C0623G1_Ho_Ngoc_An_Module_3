@@ -1,7 +1,7 @@
 USE casestudy;
 
 -- Câu 11
-SELECT dk.*,k.ho_ten,k.dia_chi,l.ten_loai_khach
+SELECT dk.*,k.ho_ten,k.dia_chi,l.ten_loai_khach 
 FROM dich_vu_di_kem dk
 JOIN hop_dong_chi_tiet hct
 ON dk.ma_dich_vu_di_kem = hct.ma_dich_vu_di_kem

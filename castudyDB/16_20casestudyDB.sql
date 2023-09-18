@@ -9,7 +9,7 @@ WHERE h.ma_hop_dong IS NULL
 OR (h.ngay_lam_hop_dong < "2019-1-1" AND h.ngay_lam_hop_dong> "2021-12-31");
 
 -- Câu 17
-SELECT k.ma_khach_hang, k.ho_ten,l.ten_loai_khach,sum(d.chi_phi_thue+h.tien_dat_coc+dk.gia*hct.so_luong)
+SELECT k.ma_khach_hang,k.ho_ten,l.ten_loai_khach,sum(d.chi_phi_thue+dk.gia*hct.so_luong)
 FROM hop_dong h
 JOIN khach_hang k
 ON h.ma_khach_hang = k.ma_khach_hang
@@ -23,15 +23,16 @@ JOIN dich_vu_di_kem dk
 ON hct.ma_dich_vu_di_kem = dk.ma_dich_vu_di_kem
 WHERE l.ten_loai_khach = "Platinum" 
 AND YEAR(h.ngay_lam_hop_dong)=2021
-GROUP BY k.ma_khach_hang
-HAVING sum(d.chi_phi_thue+h.tien_dat_coc+dk.gia*hct.so_luong)>1000000;
+GROUP BY k.ho_ten,k.ma_khach_hang,l.ten_loai_khach
+HAVING sum(d.chi_phi_thue+dk.gia*hct.so_luong)>10000000;
 
 -- Câu 18
-SELECT*
+SELECT k.ma_khach_hang, k.ho_ten
 FROM hop_dong h 
 JOIN khach_hang k
 ON h.ma_khach_hang = k.ma_khach_hang
-WHERE h.ngay_lam_hop_dong<="2021-12-31";
+WHERE h.ngay_lam_hop_dong<="2021-12-31"
+GROUP BY k.ho_ten,k.ma_khach_hang;
 
 -- Câu 19
 SELECT dk.*, count( dk.ma_dich_vu_di_kem) AS "Số lần sử dụng"
