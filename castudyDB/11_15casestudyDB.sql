@@ -43,7 +43,7 @@ ORDER BY count(dk.ma_dich_vu_di_kem) DESC
 LIMIT 3;
 
 -- Câu 14
-SELECT dk.ten_dich_vu_di_kem, count(dk.ten_dich_vu_di_kem) AS "Số lần sử dụng"
+SELECT hct.ma_hop_dong, l.ten_loai_dich_vu,dk.ten_dich_vu_di_kem,count(dk.ma_dich_vu_di_kem) AS "Số lần sử dụng"
 FROM dich_vu_di_kem dk
 JOIN hop_dong_chi_tiet hct
 ON dk.ma_dich_vu_di_kem = hct.ma_dich_vu_di_kem
@@ -53,8 +53,8 @@ RIGHT JOIN dich_vu d
 ON h.ma_dich_vu = d.ma_dich_vu
 RIGHT JOIN loai_dich_vu l 
 ON d.ma_loai_dich_vu = l.ma_loai_dich_vu
-GROUP BY dk.ten_dich_vu_di_kem
-HAVING  count(dk.ten_dich_vu_di_kem) = 1;
+GROUP BY dk.ma_dich_vu_di_kem
+HAVING count(dk.ma_dich_vu_di_kem) = 1;
 
 -- Câu 15
 
@@ -66,5 +66,6 @@ LEFT JOIN bo_phan b ON b.ma_bo_phan = n.ma_bo_phan
 WHERE h.ngay_lam_hop_dong BETWEEN "2020-1-1" AND "2021-12-31"
 GROUP BY n.ma_nhan_vien
 HAVING count(n.ma_nhan_vien)<=3;
+
 
 
