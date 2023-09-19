@@ -38,7 +38,7 @@ FROM
 CREATE OR REPLACE VIEW product_views AS
 SELECT product_code, product_name, product_price, product_status
 FROM products
-WHERE product_status = '1';
+WHERE product_status = '0';
 
 DROP VIEW product_views;
 

@@ -54,7 +54,7 @@ ORDER BY MONTH(h.ngay_lam_hop_dong);
 
 -- Câu 10
 
-SELECT h.ma_hop_dong, h.ngay_lam_hop_dong, h.ngay_ket_thuc, h.tien_dat_coc, sum(hct.so_luong) as "So_luong_dich_vu_di_kem"
+SELECT h.ma_hop_dong, h.ngay_lam_hop_dong, h.ngay_ket_thuc, h.tien_dat_coc, sum(ifnull(hct.so_luong,0)) as "So_luong_dich_vu_di_kem"
 FROM hop_dong h
 LEFT JOIN hop_dong_chi_tiet hct 
 ON h.ma_hop_dong = hct.ma_hop_dong

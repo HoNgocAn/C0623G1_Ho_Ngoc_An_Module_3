@@ -5,7 +5,7 @@ WHERE credit =
 (SELECT max(credit)
 FROM subjects);
 
-SELECT s.subId, s.subName, s.credit, m.mark
+SELECT s.subId, s.subName, s.credit, m.mark AS "Scrore"
 FROM subjects s
 LEFT JOIN mark m ON s.subId = m.subId
 WHERE m.mark = (

@@ -16,3 +16,15 @@ FROM v_nhan_vien;
 UPDATE v_nhan_vien
 SET dia_chi = "Liên Chiểu" 
 WHERE dia_chi = "%Hải Châu%";
+
+-- Câu 23
+DELIMITER //
+CREATE  PROCEDURE deleteKhachHang(ma_khach_hang_id int)
+BEGIN 
+	DELETE FROM khach_hang
+    WHERE ma_khach_hang = ma_khach_hang_id; 
+END //
+DELIMITER ;
+
+-- CALL deleteKhachHang ();
+
