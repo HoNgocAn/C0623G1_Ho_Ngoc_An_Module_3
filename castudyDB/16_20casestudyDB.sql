@@ -22,7 +22,7 @@ JOIN dich_vu_di_kem dk
 ON hct.ma_dich_vu_di_kem = dk.ma_dich_vu_di_kem
 WHERE l.ten_loai_khach = "Platinum" 
 AND YEAR(h.ngay_lam_hop_dong)=2021
-GROUP BY k.ho_ten,k.ma_khach_hang,l.ten_loai_khach
+GROUP BY k.ma_khach_hang
 HAVING sum(d.chi_phi_thue+dk.gia*hct.so_luong)>1000000;
 
 -- Câu 18
@@ -34,7 +34,9 @@ WHERE h.ngay_lam_hop_dong<="2021-12-31"
 GROUP BY k.ho_ten,k.ma_khach_hang;
 
 -- Câu 19
-
+UPDATE dich_vu_di_kem 
+SET gia = gia * 2
+WHERE ma_dich_vu_di_kem IN (
 SELECT dk.ma_dich_vu_di_kem ,sum(hct.so_luong) AS "Số lần sử dụng"
 FROM hop_dong h
 JOIN hop_dong_chi_tiet hct 
@@ -43,7 +45,7 @@ JOIN dich_vu_di_kem dk
 ON hct.ma_dich_vu_di_kem = dk.ma_dich_vu_di_kem
 WHERE YEAR(h.ngay_lam_hop_dong) = 2020
 GROUP BY dk.ma_dich_vu_di_kem
-HAVING sum(hct.so_luong)>10;
+HAVING sum(hct.so_luong)>10);
 
 -- câu 20
 SELECT n.ma_nhan_vien AS "Mã", n.ho_ten AS "Họ tên", n.email, n.so_dien_thoai, n.ngay_sinh, n.dia_chi

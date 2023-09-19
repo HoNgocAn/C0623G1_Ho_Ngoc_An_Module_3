@@ -29,7 +29,7 @@ ORDER BY count(k.ma_khach_hang);
 
 -- Câu 5
 SELECT k.ma_khach_hang, k.ho_ten,l.ten_loai_khach,h.ma_hop_dong,d.ten_dich_vu,h.ngay_lam_hop_dong, h.ngay_ket_thuc, d.ten_dich_vu,
-(d.chi_phi_thue + hct.so_luong*dk.gia) as "Tổng tiền"
+(ifnull(d.chi_phi_thue,0) + ifnull(hct.so_luong,0)*ifnull(dk.gia,0)) as "Tổng tiền"
 FROM hop_dong h
 RIGHT JOIN khach_hang k 
 ON h.ma_khach_hang = k.ma_khach_hang
