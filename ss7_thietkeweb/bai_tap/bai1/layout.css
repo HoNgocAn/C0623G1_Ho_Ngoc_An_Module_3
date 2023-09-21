@@ -1,0 +1,33 @@
+header {
+    background-color: aqua;
+    min-height: 200px;
+
+}
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 5px;
+}
+section{
+    background-color: chartreuse;
+    min-height: 300px;
+    float: left;
+    width: 75%;
+}
+article{
+    background-color: beige;
+    min-height: 130px;
+}
+aside{
+    background-color: chocolate;
+    min-height: 300px;
+    float: left;
+    width: 25%;
+}
+footer{
+    background-color: aqua;
+    min-height: 400px;
+}
