@@ -1,5 +1,5 @@
 #wrap{
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 #header{
@@ -11,7 +11,6 @@
     background-color: gray;
     color: #CDCDCD;
     text-align: center;
-    padding: 5px;
 }
 nav ul {
     padding: 0;
@@ -24,14 +23,26 @@ nav ul li {
 #wrap-content{
     display: flex;
     flex-wrap: wrap;
+    height: 550px;
 }
+p{
+    text-align: justify;
+}
+#h1content,#h2content,.pcontent{
+    padding-left: 150px;
+}
+.pcontent1{
+    height: 100px;
+}
+
 #contentleft,
 #contentright{
     padding: 10px;
     box-sizing: border-box;
 }
-#contentleft{
+#contentleft {
     flex-basis: 100%;
+
 }
 #contentright{
     flex-basis: 100%;
@@ -44,7 +55,8 @@ nav ul li {
     #contentright{
         flex-basis: 30%;
     }
-}@media (min-width: 1200px) {
+}
+@media (min-width: 1200px) {
     #contentleft{
         flex-basis: 80%;
     }
@@ -53,8 +65,4 @@ nav ul li {
     }
 }
 
-
-p{
-    text-align: justify;
-}
 
