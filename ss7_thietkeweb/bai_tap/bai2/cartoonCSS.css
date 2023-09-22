@@ -1,0 +1,35 @@
+nav ul {
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 5px;
+}
+#wrap-content{
+    display: flex;
+    flex-wrap: wrap;
+    height: 550px;
+}
+#contentleft,
+#contentright{
+    padding: 10px;
+    box-sizing: border-box;
+}
+#contentleft {
+    flex-basis: 100%;
+
+}
+#contentright{
+    flex-basis: 100%;
+}
+
+@media (min-width: 600px) {
+    #contentleft{
+        flex-basis: 40%;
+    }
+    #contentright{
+        flex-basis: 60%;
+    }
+}
