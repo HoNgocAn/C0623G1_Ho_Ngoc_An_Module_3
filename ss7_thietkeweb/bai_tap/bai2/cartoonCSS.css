@@ -7,6 +7,10 @@ nav ul li {
     display: inline;
     margin: 5px;
 }
+footer{
+    text-align: center;
+    position: absolute;
+}
 #wrap-content{
     display: flex;
     flex-wrap: wrap;
@@ -21,15 +25,23 @@ nav ul li {
     flex-basis: 100%;
 
 }
-#contentright{
+#contentright {
     flex-basis: 100%;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 100px) {
     #contentleft{
         flex-basis: 40%;
     }
     #contentright{
         flex-basis: 60%;
+    }
+}
+@media (min-width: 1200px) {
+    #contentleft{
+        flex-basis: 35%;
+    }
+    #contentright{
+        flex-basis: 65%;
     }
 }
