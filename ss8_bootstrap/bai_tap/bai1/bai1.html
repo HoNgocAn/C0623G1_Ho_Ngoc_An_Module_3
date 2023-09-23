@@ -7,21 +7,41 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.css">
+  <style>
+    h4,p{
+      font-family: "Times New Roman", serif;
+    }
+  </style>
 </head>
 <body>
-  <div class="row">
-    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-      <img src="img.png" width="350" height="350">
+  <header>
+    <h4 class="fw-bold">Responsive Image Gallery</h4>
+    <p class="fw-bold">Resize the browser window to see the effect.</p>
+  </header>
+  <div class="row" >
+    <div class="col-12 col-sm-12 col-md-6 col-lg-3" >
+      <a href="#">
+      <img src="https://dulichviet.com.vn/images/bandidau/danh-sach-nhung-buc-anh-viet-nam-lot-top-anh-dep-the-gioi.jpg" width="350" height="350">
+      </a>
     </div>
     <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-      <img src="img.png" width="350" height="350">
+      <a href="#">
+      <img src="https://images.pexels.com/photos/1048283/pexels-photo-1048283.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="350" height="350">
+      </a>
     </div>
     <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-      <img src="img.png" width="350" height="350">
+      <a href="#">
+      <img src="https://vcdn1-dulich.vnecdn.net/2021/07/16/1-1626437591.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=i2M2IgCcw574LT-bXFY92g" width="350" height="350">
+      </a>
     </div>
     <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-      <img src="img.png" width="350" height="350">
+      <a href="#">
+      <img src="https://vapa.vn/wp-content/uploads/2022/12/anh-3d-thien-nhien.jpeg" width="350" height="350">
+      </a>
     </div>
+    <p class="justify-content-center">This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide,
+      it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images
+      will stack vertically (100%). </p>
   </div>
   <script src="../../bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
 </body>
