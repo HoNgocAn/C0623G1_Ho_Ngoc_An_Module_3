@@ -26,6 +26,7 @@ nav ul li {
     height: 550px;
 }
 p{
+    font-family: "Times New Roman", serif;
     text-align: justify;
 }
 #h1content,#h2content,.pcontent{

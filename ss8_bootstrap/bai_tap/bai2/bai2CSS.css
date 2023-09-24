@@ -1,0 +1,27 @@
+
+#h1select{
+    padding-top: 60px;
+    padding-left: 50px;
+    font-size: 80px;
+}
+.contentselect1{
+    padding-left: 50px;
+    font-size: 20px;
+}
+.contentselect{
+    padding-left: 50px;
+    color: black;
+    text-decoration: none;
+    padding-bottom: 60px;
+}
+.text-decoration-none{
+    color: #5c636a;
+    font-size: 14px;
+}
+.row section{
+    padding: 10px 10px 10px 10px;
+}
+.row.row1{
+    padding: 30px 30px 30px 30px;
+
+}
