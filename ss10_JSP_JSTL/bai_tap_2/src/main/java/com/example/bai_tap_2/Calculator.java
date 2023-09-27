@@ -1,36 +1,23 @@
 package com.example.bai_tap_2;
 
 public class Calculator {
-    private double firstOperand;
-    private double secondOperand;
-
-    public double Addition(double firstOperand, double secondOperand){
-        return firstOperand+secondOperand;
-    }
-    public double Subtraction(double firstOperand, double secondOperand){
-        return firstOperand-secondOperand;
-    }
-    public double Multiplication(double firstOperand, double secondOperand){
-        return firstOperand*secondOperand;
-    }
-    public double Division(double firstOperand, double secondOperand){
-        return firstOperand/secondOperand;
-    }
-
-
-    public double getFirstOperand() {
-        return firstOperand;
-    }
-
-    public void setFirstOperand(double firstOperand) {
-        this.firstOperand = firstOperand;
-    }
-
-    public double getSecondOperand() {
-        return secondOperand;
-    }
-
-    public void setSecondOperand(double secondOperand) {
-        this.secondOperand = secondOperand;
+    public static double calculate(double firstOperand, double secondOperand, String operator) {
+        switch (operator) {
+            case "Addition":
+                return firstOperand + secondOperand;
+            case "Subtraction":
+                return firstOperand - secondOperand;
+            case "Multiplication" :
+                return firstOperand * secondOperand;
+            case "Division" :
+                if(secondOperand != 0) {
+                    return firstOperand / secondOperand;
+                }
+                else {
+                    throw new RuntimeException("Can't divide by zero");
+                }
+            default:
+                throw new RuntimeException("Invalid operation");
+        }
     }
 }

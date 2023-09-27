@@ -9,7 +9,7 @@
 <h1>SIMPLE CALCULATOR</h1>
 <form method="get" action="calculator-servlet">
     <fieldset>
-        <legend>Calculator</legend>
+        <p>Calculator</p>
         <table>
             <tr>
                 <th>First operand:</th>
