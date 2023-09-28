@@ -1,21 +1,20 @@
 package com.example.bai_tap_2;
 
 public class Calculator {
-    public static double calculate(double firstOperand, double secondOperand, String operator) {
-        switch (operator) {
-            case "Addition":
+
+    public static double calculate(double firstOperand, double secondOperand, char operator ){
+        switch (operator){
+            case '+':
                 return firstOperand + secondOperand;
-            case "Subtraction":
+            case '-':
                 return firstOperand - secondOperand;
-            case "Multiplication" :
+            case '*':
                 return firstOperand * secondOperand;
-            case "Division" :
-                if(secondOperand != 0) {
-                    return firstOperand / secondOperand;
-                }
-                else {
+            case '/':
+                if(secondOperand == 0) {
                     throw new RuntimeException("Can't divide by zero");
-                }
+                } else {
+                    return firstOperand / secondOperand;}
             default:
                 throw new RuntimeException("Invalid operation");
         }
