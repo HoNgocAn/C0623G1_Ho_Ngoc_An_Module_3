@@ -4,33 +4,25 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 
-@WebServlet(name = "CalculatorServlet", value = "/calculator-servlet")
+
+@WebServlet(name = "CalculatorServlet", urlPatterns = "/calculate")
 public class CalculatorServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        double firstOperand = Double.parseDouble(request.getParameter("firstOperand"));
-        double secondOperand = Double.parseDouble(request.getParameter("secondOperand"));
-        String operator = request.getParameter("operator");
-
-        request.setAttribute("firstOperand", firstOperand);
-        request.setAttribute("secondOperand", secondOperand);
-        request.setAttribute("operator", operator);
-
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/result.jsp");
-        String result;
-        try {
-            result = Calculator.calculate(firstOperand, secondOperand, operator) + "";
-        } catch (Exception e) {
-            result = e.getMessage();
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        double firstOperand = Double.parseDouble(request.getParameter("first-operand"));
+        double secondOperand = Double.parseDouble(request.getParameter("second-operand"));
+        char operator = request.getParameter("operator").charAt(0);
+        PrintWriter writer = response.getWriter();
+        try{
+            double result = Calculator.calculate(firstOperand, secondOperand, operator);
+            writer.println(firstOperand + " " + operator + " " + secondOperand + " = " + result);
+        }catch (Exception ex){
+            writer.println("Error: " + ex.getMessage());
         }
-
-        request.setAttribute("result", result);
-        requestDispatcher.forward(request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 }

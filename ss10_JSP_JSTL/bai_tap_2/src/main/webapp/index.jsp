@@ -1,37 +1,36 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Calculator</title>
 </head>
 <body>
-<a href="/result.jsp">Result</a>
-<h1>SIMPLE CALCULATOR</h1>
-<form method="get" action="calculator-servlet">
+<h1>Simple Calculator</h1>
+<form method="post" action="/calculate">
     <fieldset>
-        <p>Calculator</p>
+        <legend>Calculator</legend>
         <table>
             <tr>
-                <th>First operand:</th>
-                <td> <input type="number" name="firstOperand"></td>
+                <td>First operand: </td>
+                <td><input name="first-operand" type="text"/></td>
             </tr>
             <tr>
-                <th>Operator:</th>
+                <td>Operator: </td>
                 <td>
-                    <select>
-                        <option>Addition</option>
-                        <option>Subtraction</option>
-                        <option>Multiplication</option>
-                        <option>Division</option>
+                    <select name="operator">
+                        <option value="+">Addition</option>
+                        <option value="-">Subtraction</option>
+                        <option value="*">Multiplication</option>
+                        <option value="/">Division</option>
                     </select>
                 </td>
             </tr>
             <tr>
-                <th>Second operand:</th>
-                <td><input type="number" name="secondOperand"></td>
+                <td>Second operand: </td>
+                <td><input name="second-operand" type="text"/></td>
             </tr>
             <tr>
-                <td><input type="submit" value="calculate"></td>
+                <td></td>
+                <td><input type="submit" value="Calculate"/></td>
             </tr>
         </table>
     </fieldset>

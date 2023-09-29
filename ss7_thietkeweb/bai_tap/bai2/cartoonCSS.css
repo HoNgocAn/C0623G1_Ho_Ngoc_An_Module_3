@@ -29,7 +29,7 @@ footer{
     flex-basis: 100%;
 }
 
-@media (min-width: 100px) {
+@media (min-width: 700px) {
     #contentleft{
         flex-basis: 40%;
     }
