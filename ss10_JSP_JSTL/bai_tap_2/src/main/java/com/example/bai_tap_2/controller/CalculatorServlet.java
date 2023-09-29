@@ -1,4 +1,6 @@
-package com.example.bai_tap_2;
+package com.example.bai_tap_2.controller;
+
+import com.example.bai_tap_2.model.Calculator;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

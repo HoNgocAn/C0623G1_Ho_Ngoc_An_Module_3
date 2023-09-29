@@ -1,4 +1,4 @@
-package com.example.bai_tap_1;
+package com.example.bai_tap_1.model;
 
 public class Customer {
     private String name;
