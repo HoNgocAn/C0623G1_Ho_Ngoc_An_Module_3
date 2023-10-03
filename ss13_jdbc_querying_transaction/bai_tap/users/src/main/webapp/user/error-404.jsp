@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body style="text-align: center">
-<h3>Trang nay khong ton tai!</h3>
+<h3>Khong co trang nay</h3>
 </body>
 </html>
