@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="562e1d59-fb33-447d-864b-336fb2052247" name="Changes" comment="">
+    <list default="true" id="172c840a-4126-46df-a736-1cad1990f780" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../ss11/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss11/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss11/.idea/ss11_ MVC_Model.iml" beforeDir="false" />
@@ -54,8 +54,15 @@
       <change beforePath="$PROJECT_DIR$/../ss11/thuc_hanh/src/main/webapp/customer/view.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss11/thuc_hanh/src/main/webapp/error-404.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss11/thuc_hanh/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_mvc/bai_tap/src/main/java/com/example/bai_tap/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_mvc/bai_tap/src/main/java/com/example/bai_tap/controller/ProductServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/src/main/java/com/example/usermanager/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/src/main/java/com/example/usermanager/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/src/main/java/com/example/usermanager/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/src/main/java/com/example/usermanager/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/src/main/java/com/example/usermanager/service/IUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/src/main/java/com/example/usermanager/service/IUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/src/main/java/com/example/usermanager/service/impl/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/src/main/java/com/example/usermanager/service/impl/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/src/main/webapp/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc_crud/user-manager/src/main/webapp/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss9_tong_quan_ve_ung_dung_web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss9_tong_quan_ve_ung_dung_web/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss9_tong_quan_ve_ung_dung_web/bai_tap/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss9_tong_quan_ve_ung_dung_web/bai_tap/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,36 +72,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2W0AIz6vGK9wdoGsPzheml2DdPi" />
+  <component name="ProjectId" id="2WCIkxaFomTxpuIL7POfET2X0gs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/C0623G1_Ho_Ngoc_An_Module_3/C0623G1_Ho_Ngoc_An_Module_3/ss9_tong_quan_ve_ung_dung_web/bai_tap&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/C0623G1_Ho_Ngoc_An_Module_3/C0623G1_Ho_Ngoc_An_Module_3/ss13_jdbc_querying_transaction/thuc_hanh/users"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="562e1d59-fb33-447d-864b-336fb2052247" name="Changes" comment="" />
-      <created>1695859047243</created>
+      <changelist id="172c840a-4126-46df-a736-1cad1990f780" name="Changes" comment="" />
+      <created>1696230281972</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695859047243</updated>
-      <workItem from="1695859048465" duration="167000" />
-      <workItem from="1695972611246" duration="24000" />
-      <workItem from="1695972666613" duration="88000" />
-      <workItem from="1695972847337" duration="27000" />
-      <workItem from="1696040378996" duration="8000" />
+      <updated>1696230281972</updated>
+      <workItem from="1696230283106" duration="10000" />
     </task>
     <servers />
   </component>

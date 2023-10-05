@@ -29,7 +29,7 @@
         <td><c:out value="${user.email}"/></td>
         <td><c:out value="${user.country}"/></td>
         <td>
-          <a href="?action=view&id=${user.getId()}">View</a>
+          <a href="/users?action=view&id=${user.getId()}">View</a>
           <a href="/users?action=edit&id=${user.id}">Edit</a>
           <a href="/users?action=delete&id=${user.id}">Delete</a>
         </td>
